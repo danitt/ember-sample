@@ -18,6 +18,11 @@ export default Component.extend({
     },
     cancel() {
       console.info('Cancel called');
+    },
+    delete(bookmark) {
+      console.info('Delete called');
+      bookmark.destroyRecord();
+      this.get('router').transitionTo('bookmarks');
     }
   }
 });
