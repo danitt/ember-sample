@@ -1,5 +1,4 @@
 import DS from 'ember-data';
-// import { belongsTo, hasMany} from 'ember-data/relationships';
 
 export default DS.Model.extend({
   link: DS.attr('string'),
@@ -9,4 +8,5 @@ export default DS.Model.extend({
   created: DS.attr('date', {
     defaultValue: () => new Date(),
   }),
+  user: DS.belongsTo('user'),
 });
