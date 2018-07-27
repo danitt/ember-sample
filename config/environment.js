@@ -1,11 +1,9 @@
-'use strict';
-
 module.exports = function(environment) {
   let ENV = {
     modulePrefix: 'bookmarker',
     environment,
     rootURL: '/',
-    locationType: 'auto',
+    locationType: 'auto', // history (browser history web API), hash (eg /#/page), none (no route handling), auto
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
@@ -20,6 +18,7 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
+      title: 'Bookmarks (declared in environment.js',
     }
   };
 
