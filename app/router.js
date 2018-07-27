@@ -15,6 +15,10 @@ Router.map(function() {
       path: '/edit/:bookmark_id'
     });
   });
+
+  this.route('page-not-found', {
+    path: '/*path'
+  });
 });
 
 export default Router;
