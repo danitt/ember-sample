@@ -1,0 +1,8 @@
+<h2>About Page</h2>
+{{#each model as |bookmark|}}
+  <article id={{bookmark.id}}>
+    <a href={{bookmark.link}} target="_blank">
+      {{bookmark.title}} - {{bookmark.about}}
+    </a>
+  </article>
+{{/each}}
