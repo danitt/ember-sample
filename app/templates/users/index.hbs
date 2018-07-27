@@ -1,0 +1,15 @@
+<h3>Users</h3>
+
+{{#each model as |user index|}}
+
+  <p>#{{index}} - {{user.fullName}}</p>
+
+  {{#each user.bookmarks as |bookmark|}}
+    {{bookmark-listing bookmark=bookmark}}
+  {{else}}
+    <p>No Bookmarks for User</p>
+  {{/each}}
+
+{{/each}}
+
+{{outlet}}

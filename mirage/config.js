@@ -44,8 +44,11 @@ export default function() {
     if (Object.keys(request.queryParams).length === 0) {
       users = db.users.all();
     } else {
-      let filterByIsAdmin = request.queryParams['isAdmin'];
-      users = db.users.where({isAdmin: filterByIsAdmin});
+      const queryParams = {};
+      if (request.queryParams.isAdmin) {
+        queryParams.isAdmin = request.queryParams.isAdmin;
+      }
+      users = db.users.where(queryParams);
     }
     return users;
   });

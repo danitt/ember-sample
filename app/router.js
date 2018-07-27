@@ -17,12 +17,13 @@ Router.map(function() {
     this.route('about');
   });
 
-  this.route('page-not-found', {
-    path: '/*path'
+  this.route('users', function() {
+    this.route('/');
+    this.route('list-active');
   });
 
-  this.route('users', function() {
-    this.route('list-active');
+  this.route('page-not-found', {
+    path: '/*path'
   });
 });
 
