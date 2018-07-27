@@ -12,13 +12,12 @@ Router.map(function() {
     this.route('new');
 
     this.route('edit', {
-      path: '/edit/:bookmark_id'
+      path: 'edit/:bookmark_id'
     });
     this.route('about');
   });
 
   this.route('users', function() {
-    this.route('/');
     this.route('list-active');
   });
 
