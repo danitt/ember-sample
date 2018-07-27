@@ -18,6 +18,12 @@ module.exports = {
     browser: true
   },
   rules: {
+    'no-console': [
+      'error',
+      {
+        allow: ['info', 'warn', 'error']
+      }
+    ]
   },
   overrides: [
     // node files
