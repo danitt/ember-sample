@@ -1,3 +1,4 @@
+import { computed } from '@ember/object';
 import DS from 'ember-data';
 
 export default DS.Model.extend({
@@ -13,4 +14,7 @@ export default DS.Model.extend({
     defaultValue: () => new Date(),
   }),
   bookmarks: DS.hasMany('bookmark'),
+  fullName: computed('firstName', 'lastName', function() {
+    return `${this.get('firstName')} ${this.get('lastName')}`;
+  })
 });
